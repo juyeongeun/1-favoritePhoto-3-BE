@@ -44,8 +44,8 @@ router.get(
   "/cards",
   asyncHandle(async (req, res) => {
     const {
-      pageSize = 10,
-      cursor = null,
+      page = 1, // 페이지 번호
+      pageSize = 10, // 페이지당 포토카드 10개 수
       search,
       grade,
       genre,
@@ -56,9 +56,10 @@ router.get(
     const shopCards = await shopService.getAllShop(
       { search, grade, genre, isSoldOut }, // 필터를 전달
       sortOrder,
-      cursor,
-      parseInt(pageSize)
+      parseInt(page), // 페이지 번호
+      parseInt(pageSize) // 페이지 사이즈
     );
+
     return res.status(200).json(shopCards);
   })
 );
@@ -117,6 +118,18 @@ router.delete(
       userId // userId를 함께 전달
     );
     return res.status(200).json({ message: "카드의 판매가 취소되었습니다." });
+  })
+);
+
+router.get(
+  "/cards/:shopId/exchange",
+  passport.authenticate("access-token", { session: false }),
+  asyncHandle(async (req, res) => {
+    const { shopId } = req.params;
+    const shopDetails = await shopService.getExchangeByShopId(
+      parseInt(shopId, 10)
+    );
+    return res.status(200).json(shopDetails);
   })
 );
 
