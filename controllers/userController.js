@@ -63,8 +63,10 @@ router.delete(
       await userService.updateUser(userId, {
         refreshToken: "",
       });
-      res.cookie("access-token", null, cookiesConfig.accessTokenOption);
-      res.cookie("refresh-token", null, cookiesConfig.accessTokenOption);
+      res.clearCookie("access-token", { path: "/" });
+      res.clearCookie("refresh-token", { path: "/" });
+      // res.cookie("access-token", null, cookiesConfig.accessTokenOption);
+      // res.cookie("refresh-token", null, cookiesConfig.refreshTokenOption);
       res.status(200).send({ message: "로그아웃 되었습니다" });
     } catch (error) {
       next(error);
@@ -187,7 +189,7 @@ router.get(
         );
         res.cookie(
           "refresh-token",
-          refreshToken,
+          newRefreshToken,
           cookiesConfig.refreshTokenOption
         );
 
@@ -271,6 +273,7 @@ router.get(
         genre = "",
         salesType = "",
         isSoldOut = "false",
+        keyword = "",
       } = req.query;
 
       const sales = await userService.getMySales(userId, {
@@ -280,6 +283,7 @@ router.get(
         genre,
         salesType,
         isSoldOut,
+        keyword,
       });
 
       res.status(200).send(sales);

@@ -2,9 +2,17 @@ import userRepository from "../repositorys/userRepository.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-const whereConditions = ({ userId, grade, genre, salesType, isSoldOut }) => {
+const whereConditions = ({
+  keyword,
+  userId,
+  grade,
+  genre,
+  salesType,
+  isSoldOut,
+}) => {
   const where = {
     userId,
+    name: { contains: keyword, mode: "insensitive" },
   };
   if (genre) {
     where.genre = genre;
@@ -112,8 +120,8 @@ const refreshToken = async (userId, refreshToken) => {
   }
 
   if (refreshToken !== user.refreshToken) {
-    const error = new Error("Unauthorized");
-    error.status = 401;
+    const error = new Error("Forbidden");
+    error.status = 403;
     error.data = {
       message: "리프레쉬 토큰이 유효하지 않습니다.",
     };
@@ -123,8 +131,9 @@ const refreshToken = async (userId, refreshToken) => {
 };
 
 const getMySales = async (userId, data) => {
-  const { limit, cursor, grade, genre, salesType, isSoldOut } = data;
+  const { limit, cursor, grade, genre, salesType, isSoldOut, keyword } = data;
   const where = whereConditions({
+    keyword,
     userId,
     grade,
     genre,
