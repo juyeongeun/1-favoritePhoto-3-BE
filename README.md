@@ -9,12 +9,30 @@
 ---
 
 ## **👨‍👩‍👧 팀원 구성**
+<div align="center">
+  <table height="250px" width="100%">
+    <tbody>
+      <tr>
+        <td align="center">
+          <img src="https://github.com/user-attachments/assets/866cb1b5-a8d5-4a3c-ab6e-00b1356f8cf1" width="150px;" alt="탁우현"/><br />
+          <b>FS 팀원: 탁우현</b><br />
+          <sub><a href="https://github.com/WooHyunTak">GitHub 프로필</a></sub>
+        </td>
+        <td align="center">
+          <img src="https://github.com/user-attachments/assets/56e6f1e8-955f-451d-b68e-f68011bba6c2" width="150px;" alt="주영은"/><br />
+          <b>FS 팀원: 주영은</b><br />
+          <sub><a href="https://github.com/juyeongeun">GitHub 프로필</a></sub>
+        </td>
+        <td align="center">
+          <img src="https://github.com/user-attachments/assets/f2225266-aa8d-470a-ac16-abfea32c1e43" width="150px;" alt="김소희"/><br />
+          <b>FS 팀원: 김소희</b><br />
+          <sub><a href="https://github.com/Im-amberIm">GitHub 프로필</a></sub>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-탁우현 [개인 Github 링크: https://github.com/WooHyunTak] 
-
-주영은 [개인 Github 링크: [https://github.com/juyeongeun](https://github.com/dieuaimer)]
-
-김소희 [개인 Github 링크: [https://github.com/S2OHEE](https://github.com/Im-amberim)]
 
 ---
 
