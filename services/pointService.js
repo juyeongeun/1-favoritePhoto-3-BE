@@ -14,7 +14,7 @@ const drawPoints = async (userId) => {
   }
 
   const drawResult = getRandomPoint(); // 랜덤 포인트 생성
-  const updatedUser = await pointRepository.drawPoints(userId, drawResult);
+  await pointRepository.drawPoints(userId, drawResult); // 포인트 업데이트
 
   // 알림 생성
   await createNotificationFromType("포인트획득", {
@@ -23,7 +23,7 @@ const drawPoints = async (userId) => {
     point: drawResult, // 획득한 포인트
   });
 
-  return filterSensitiveUserData(updatedUser);
+  return { point: drawResult };
 };
 
 const filterSensitiveUserData = (user) => {
