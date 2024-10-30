@@ -32,7 +32,7 @@
 
 ### Backend
 
-<img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=PrismaORM&logoColor=white">
+<img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/PrismaORM-2D3748?style=for-the-badge&logo=Prisma&logoColor=white">
 
 ### Database
 
