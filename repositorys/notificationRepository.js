@@ -13,7 +13,7 @@ const getNotificationById = (id) => {
 /* (현재) 알림 조회 */
 const getAllNotifications = (userId) => {
   return prismaClient.notification.findMany({
-    where: { userId },
+    where: { userId, read: false },
     orderBy: { createAt: "desc" }, // 최신 알림 맨 위 상단에 위치
   });
 };
