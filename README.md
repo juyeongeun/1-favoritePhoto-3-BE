@@ -4,7 +4,7 @@
 
 # **👥 스프린트 1기 3팀_BE**
 
-팀 협업 [노션 링크: [https://www.notion.so/c53f7e74366d4e99b092d8a63e62d73f?v=ed50033a7c7e4b6b9dc37608e88a0318&pvs=4](https://www.notion.so/45d0984c93d146ebad41f9d4c835a0eb?pvs=21)]
+팀 협업 [노션 링크: [https://bubble-city-3ac.notion.site/45d0984c93d146ebad41f9d4c835a0eb?v=d38586371d5d47e8bba3ee1ec029b278&pvs=4]
 
 ---
 
